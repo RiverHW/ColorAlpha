@@ -16,6 +16,7 @@
 		04874BE92CB7BD780005F3AB /* ColorAlphaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04874BE82CB7BD780005F3AB /* ColorAlphaTests.swift */; };
 		04874BF32CB7BD780005F3AB /* ColorAlphaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04874BF22CB7BD780005F3AB /* ColorAlphaUITests.swift */; };
 		04874BF52CB7BD780005F3AB /* ColorAlphaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04874BF42CB7BD780005F3AB /* ColorAlphaUITestsLaunchTests.swift */; };
+		EC16538A71CC1AB004533245 /* Pods_ColorAlpha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FE88E11F4D648C0557AAC5 /* Pods_ColorAlpha.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		04874BEE2CB7BD780005F3AB /* ColorAlphaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorAlphaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04874BF22CB7BD780005F3AB /* ColorAlphaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAlphaUITests.swift; sourceTree = "<group>"; };
 		04874BF42CB7BD780005F3AB /* ColorAlphaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAlphaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		17FE88E11F4D648C0557AAC5 /* Pods_ColorAlpha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorAlpha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ACE0B85CB211298D9284B2A /* Pods-ColorAlpha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorAlpha.debug.xcconfig"; path = "Target Support Files/Pods-ColorAlpha/Pods-ColorAlpha.debug.xcconfig"; sourceTree = "<group>"; };
+		D662D36A8D5E8F1B2B1E85EC /* Pods-ColorAlpha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorAlpha.release.xcconfig"; path = "Target Support Files/Pods-ColorAlpha/Pods-ColorAlpha.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC16538A71CC1AB004533245 /* Pods_ColorAlpha.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,8 @@
 				04874BE72CB7BD780005F3AB /* ColorAlphaTests */,
 				04874BF12CB7BD780005F3AB /* ColorAlphaUITests */,
 				04874BCF2CB7BD740005F3AB /* Products */,
+				2D7379D7DA8CCB1CFA10F45A /* Pods */,
+				FFF9261B53C63993563E667B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +134,23 @@
 			path = ColorAlphaUITests;
 			sourceTree = "<group>";
 		};
+		2D7379D7DA8CCB1CFA10F45A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9ACE0B85CB211298D9284B2A /* Pods-ColorAlpha.debug.xcconfig */,
+				D662D36A8D5E8F1B2B1E85EC /* Pods-ColorAlpha.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FFF9261B53C63993563E667B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17FE88E11F4D648C0557AAC5 /* Pods_ColorAlpha.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04874BF82CB7BD790005F3AB /* Build configuration list for PBXNativeTarget "ColorAlpha" */;
 			buildPhases = (
+				5DDF43949FA3E06E7AB99E4F /* [CP] Check Pods Manifest.lock */,
 				04874BCA2CB7BD740005F3AB /* Sources */,
 				04874BCB2CB7BD740005F3AB /* Frameworks */,
 				04874BCC2CB7BD740005F3AB /* Resources */,
+				A9EA14F0773552093C6552A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +278,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DDF43949FA3E06E7AB99E4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColorAlpha-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9EA14F0773552093C6552A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorAlpha/Pods-ColorAlpha-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorAlpha/Pods-ColorAlpha-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorAlpha/Pods-ColorAlpha-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04874BCA2CB7BD740005F3AB /* Sources */ = {
@@ -437,55 +505,71 @@
 		};
 		04874BF92CB7BD790005F3AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ACE0B85CB211298D9284B2A /* Pods-ColorAlpha.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = S477XUK26U;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ColorAlpha/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "차이점을 찾";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = langtu.ColorAlpha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ColorAlpha.game;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		04874BFA2CB7BD790005F3AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D662D36A8D5E8F1B2B1E85EC /* Pods-ColorAlpha.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = S477XUK26U;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ColorAlpha/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "차이점을 찾";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = langtu.ColorAlpha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ColorAlpha.game;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

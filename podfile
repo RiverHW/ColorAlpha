@@ -1,0 +1,10 @@
+#Uncomment this line to define a global platform for your project
+platform :ios, '15.0'
+
+target 'ColorAlpha' do
+  use_frameworks!
+
+    pod 'SCLAlertView'
+
+end
+
